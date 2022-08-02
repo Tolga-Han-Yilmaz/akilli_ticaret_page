@@ -29,16 +29,16 @@ const Navbar = () => {
         </div>
         <div className="nav__user">
           <div className="nav__user-login">
-            <FaUser />
+            <FaUser size={22} />
             <div>
               <h5>Giriş Yap</h5>
               <p>veya üye ol</p>
             </div>
 
-            <FaAngleDown />
+            <FaAngleDown size={22} />
           </div>
           <div className="nav__user-cart">
-            <FaShoppingCart />
+            <FaShoppingCart size={22} />
             <div>
               <h5>Sepet</h5>
               <h5>0,00TL</h5>

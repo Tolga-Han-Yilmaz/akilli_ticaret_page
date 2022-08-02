@@ -12,6 +12,11 @@ nav {
       img {
         height: 3.4rem;
       }
+      .nav__company-text {
+        h2 {
+          font-size: 2rem;
+        }
+      }
     }
     .nav__company-text {
       color: $secondary-color;
@@ -35,7 +40,7 @@ nav {
         }
         button {
           float: left;
-          width: 20%;
+          width: 10%;
           padding: 1rem;
           background: $secondary-color;
           color: $text1-color;
@@ -58,11 +63,17 @@ nav {
       color: $text2-color;
       .nav__user-login {
         display: flex;
+        div {
+          margin: 0 0.7rem;
+        }
         p {
           font-size: 0.7rem;
         }
       }
       .nav__user-cart {
+        div {
+          margin-left: 0.5rem;
+        }
         display: flex;
         margin: 0 2rem;
       }
