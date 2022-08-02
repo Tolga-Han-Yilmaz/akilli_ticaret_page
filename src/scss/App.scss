@@ -1,0 +1,11 @@
+@import "./abstracts/mixin", "./abstracts/variables";
+@import "./base/reset";
+@import "./components/header.module.scss";
+@import "./components/nav.module.scss";
+body {
+  font-family: $font-family;
+  line-height: 1;
+  color: $text1-color;
+  background-color: $primary-color;
+  height: 100vh;
+}

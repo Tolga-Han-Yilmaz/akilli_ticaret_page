@@ -1,0 +1,71 @@
+nav {
+  display: flex;
+  justify-content: center;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    .nav__company {
+      display: flex;
+      margin: auto 0;
+
+      img {
+        height: 3.4rem;
+      }
+    }
+    .nav__company-text {
+      color: $secondary-color;
+      margin: auto 0;
+
+      p {
+        font-size: 0.5rem;
+      }
+    }
+    .nav__form {
+      margin: auto 0;
+      width: 500px;
+      form {
+        input[type="text"] {
+          padding: 1rem;
+          font-size: 17px;
+          border: 1px solid $border-color;
+          float: left;
+          width: 80%;
+          background: $text1-color;
+        }
+        button {
+          float: left;
+          width: 20%;
+          padding: 1rem;
+          background: $secondary-color;
+          color: $text1-color;
+          font-size: 17px;
+          border: 1px solid $border-color;
+          border-left: none;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background-color: $text1-color;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    .nav__user {
+      margin: auto 0;
+
+      display: flex;
+      color: $text2-color;
+      .nav__user-login {
+        display: flex;
+        p {
+          font-size: 0.7rem;
+        }
+      }
+      .nav__user-cart {
+        display: flex;
+        margin: 0 2rem;
+      }
+    }
+  }
+}

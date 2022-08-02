@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  border-bottom: 1px solid $border-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1200px;
+
+    .container__social {
+      margin: auto 0;
+    }
+    ul {
+      list-style-type: none;
+      cursor: pointer;
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+
+        color: $text2-color;
+      }
+    }
+    .btn {
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-yardım {
+      &:hover {
+        background-color: $secondary-color;
+        color: $text1-color;
+      }
+    }
+    .btn-blog {
+      background-color: $secondary-color;
+      color: $text1-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $text2-color;
+      }
+    }
+  }
+}
