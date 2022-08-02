@@ -1,0 +1,135 @@
+main {
+  margin-top: 1rem;
+  .main__items {
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    .container {
+      width: 1200px;
+      ul {
+        list-style-type: none;
+        cursor: pointer;
+        li {
+          display: inline-block;
+          padding: 1.2rem;
+          transition: all 0.3s;
+          &:hover {
+            background-color: $text1-color;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+  .main__anasayfa {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      width: 1200px;
+      display: flex;
+      padding: 1.2rem;
+      p:first-child {
+        color: $text4-color;
+      }
+      p:last-child {
+        color: $text3-color;
+        font-weight: 600;
+      }
+    }
+  }
+  .main__text {
+    display: flex;
+    justify-content: center;
+    p {
+      color: $text4-color;
+      span {
+        color: $text3-color;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .main__filter {
+    display: flex;
+    justify-content: center;
+
+    .row {
+      width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      padding: 1.2rem;
+      .col-25 {
+        grid-column: span 3;
+        width: 100%;
+        select {
+          width: 95%;
+          padding: 12px;
+          border: 1px solid $text1-color;
+          border-radius: 4px;
+          resize: vertical;
+        }
+      }
+      .main__filter-design {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $text4-color;
+        cursor: pointer;
+        gap: 1rem;
+      }
+    }
+  }
+  .main__product {
+    display: flex;
+    justify-content: center;
+
+    .row {
+      width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      padding: 1.2rem;
+      .col-25 {
+        grid-column: span 3;
+        width: 95%;
+        padding: 2rem;
+        text-align: center;
+        color: $text3-color;
+        border: 1px solid $border-color;
+        border-radius: 0.1rem;
+        overflow: hidden;
+        position: relative;
+        &:hover .main__product-card--detail {
+          transform: translateY(0%);
+        }
+        &:hover .main__product-card--info {
+          transform: translateY(120%);
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: 3rem;
+        }
+        .main__product-card--detail {
+          position: absolute;
+          bottom: 0;
+
+          transform: translateY(100%);
+          z-index: 1;
+          transition: transform 0.7s ease-in-out;
+        }
+        .main__product-card--info {
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 1rem;
+          transform: translateY(0%);
+          z-index: 1;
+          transition: transform 0.7s ease-in-out;
+        }
+        h4 {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
