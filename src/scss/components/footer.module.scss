@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: center;
+  color: black;
+  .row {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    padding: 1.2rem;
+    .col-20 {
+      grid-column: span 1;
+
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          margin: 0 1rem 2rem 0;
+
+          color: $text2-color;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    line-height: 1rem;
+  }
+  h4 {
+    margin-bottom: 1rem;
+  }
+  span {
+    font-weight: 700;
+  }
+}

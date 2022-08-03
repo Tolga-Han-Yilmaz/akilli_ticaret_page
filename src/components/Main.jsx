@@ -1,7 +1,39 @@
-import React from "react";
-import { FaList, FaThLarge } from "react-icons/fa";
+import React, { useEffect } from "react";
+import {
+  FaList,
+  FaThLarge,
+  FaShoppingCart,
+  FaRegHeart,
+  FaStream,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const Main = () => {
+  var myHeaders = new Headers();
+  myHeaders.append("GUID", "0739-E657-C4F4-98B4");
+  myHeaders.append(
+    "Authorization",
+    "Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMjYxZjk1Yy1mOWZlLTRlZjUtODhiOS1iOTkxYjVkZmE5MjIiLCJ1c2VyaWQiOiIxMDE0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJndWlkIjoiMDczOS1FNjU3LUM0RjQtOThCNCIsImV4cCI6MTY1OTU0MDg2OSwiaXNzIjoiaHR0cHM6Ly93d3cuYWtpbGxpdGljYXJldC5jb20vIiwiYXVkIjoiaHR0cHM6Ly93d3cuYWtpbGxpdGljYXJldC5jb20vIn0.1CGIFUakX9ZVD6uWFwnk4VSHFQCwbC4i8-IV8uExF9A"
+  );
+
+  var raw = "";
+
+  var requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+  useEffect(() => {
+    fetch(
+      "https://api.akilliticaretim.com/api/Product/ListProducts/0",
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+  }, []);
+
   return (
     <main>
       <div className="main__items">
@@ -62,7 +94,17 @@ const Main = () => {
               </p>
             </div>
             <div className="main__product-card--detail">
-              <input type="number" />
+              <input type="number" value={1} />
+              <br />
+              <div>
+                <FaShoppingCart className="icon" title="Sepete Ekle" />
+                <FaRegHeart className="icon" />
+                <FaStream className="icon" />
+              </div>
+              <button>
+                ÜRÜNÜ İNCELE
+                <FaArrowRight />
+              </button>
             </div>
           </div>
         </div>

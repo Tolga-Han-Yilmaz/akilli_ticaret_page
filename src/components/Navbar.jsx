@@ -1,13 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-import {
-  FaUtensils,
-  FaSearch,
-  FaUser,
-  FaAngleDown,
-  FaShoppingCart,
-} from "react-icons/fa";
+import { FaSearch, FaUser, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav>
