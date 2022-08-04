@@ -1,0 +1,113 @@
+@include media-xsm {
+}
+@include media-sm {
+  header .container,
+  nav .container,
+  main .main__items .container,
+  main .main__anasayfa .container,
+  main .main__filter .row,
+  main .main__product .row,
+  main .main__button .container,
+  footer .row {
+    width: 90%;
+  }
+  main .main__product .row .col-25 .main__product-card--info {
+    position: absolute;
+    bottom: 0;
+  }
+  main .d-menu {
+    margin-left: 2.2rem;
+    position: absolute;
+  }
+}
+@include media-md {
+  main {
+    .d-menu {
+      margin-left: 2.8rem;
+      position: absolute;
+    }
+    .main__product {
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .col-25 {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+  footer {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .col-20 {
+        grid-column: span 1;
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@include media-lg {
+  main .main__product .row .col-25 .main__product-card--info {
+    position: absolute;
+    bottom: -1rem;
+    left: 2rem;
+  }
+  main {
+    .main__filter {
+      .row {
+        grid-template-columns: repeat(4, 1fr);
+        .col-25 {
+          grid-column: span 1;
+        }
+      }
+    }
+    .d-menu {
+      margin-left: 4.2rem;
+      position: absolute;
+    }
+    .main__product {
+      .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .col-25 {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+  footer {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .col-20 {
+        grid-column: span 1;
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      .nav__form {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        form {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+@include media-xl {
+}

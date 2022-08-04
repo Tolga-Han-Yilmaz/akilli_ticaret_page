@@ -2,13 +2,13 @@ header {
   display: flex;
   justify-content: center;
   margin: 1rem 0;
-
+  width: 100%;
   border-bottom: 1px solid $border-color;
   .container {
     display: flex;
     justify-content: space-between;
 
-    width: 1200px;
+    width: 100%;
 
     .container__social {
       margin: auto 0;

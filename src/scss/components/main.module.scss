@@ -5,17 +5,64 @@ main {
     display: flex;
     justify-content: center;
     .container {
-      width: 1200px;
-      ul {
-        list-style-type: none;
+      width: 100%;
+
+      p {
+        padding: 1.2rem;
         cursor: pointer;
-        li {
-          display: inline-block;
-          padding: 1.2rem;
-          transition: all 0.3s;
+        display: inline-block;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $text1-color;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .d-none {
+    display: none;
+  }
+  .d-menu {
+    margin-left: 0rem;
+    position: absolute;
+    z-index: 2;
+    background: $secondary-color;
+    width: 250px;
+    color: $text1-color;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        &:hover ul {
+          display: block;
+          position: absolute;
+          margin: -40px 0 0 250px;
+        }
+        a {
+          text-decoration: none;
+          color: $text1-color;
+          padding: 10px;
+          display: block;
+          border-bottom: 1px solid $secondary-color;
           &:hover {
             background-color: $text1-color;
             color: $secondary-color;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        ul {
+          display: none;
+          li {
+            a {
+              padding: 10px;
+              font-size: 15px;
+              background-color: $secondary-color;
+              border-bottom: 1px solid $text1-color;
+              transition: all 0.3s ease-in-out;
+              width: 170px;
+            }
           }
         }
       }
@@ -26,7 +73,7 @@ main {
     justify-content: center;
 
     .container {
-      width: 1200px;
+      width: 90%;
       display: flex;
       padding: 1.2rem;
       p:first-child {
@@ -54,12 +101,12 @@ main {
     justify-content: center;
 
     .row {
-      width: 1200px;
+      width: 90%;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       padding: 1.2rem;
       .col-25 {
-        grid-column: span 3;
+        grid-column: span 12;
         width: 100%;
         select {
           width: 95%;
@@ -67,9 +114,12 @@ main {
           border: 1px solid $text1-color;
           border-radius: 4px;
           resize: vertical;
+          margin: 1rem 0;
         }
       }
       .main__filter-design {
+        width: 95%;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -84,13 +134,13 @@ main {
     justify-content: center;
 
     .row {
-      width: 1200px;
+      width: 90%;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(1, 1fr);
 
       padding: 1.2rem;
       .col-25 {
-        grid-column: span 3;
+        grid-column: span 12;
         width: 95%;
         padding: 2rem;
         text-align: center;
@@ -151,12 +201,14 @@ main {
           }
         }
         .main__product-card--info {
+          width: 80%;
           position: absolute;
           bottom: 0;
+          right: 2rem;
           margin-bottom: 1rem;
           transform: translateY(0%);
           z-index: 1;
-          transition: transform 0.7s ease-in-out;
+          transition: transform 0.3s ease-in-out;
         }
         h4 {
           margin: 1rem 0;
@@ -169,6 +221,8 @@ main {
     justify-content: center;
 
     .container {
+      width: 100%;
+      text-align: center;
       button {
         padding: 0.7rem;
         margin: 0.3rem;

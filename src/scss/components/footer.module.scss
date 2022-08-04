@@ -1,16 +1,18 @@
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: black;
+  align-items: center;
+  color: $text3-color;
   .row {
-    width: 1200px;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 
     padding: 1.2rem;
     .col-20 {
       grid-column: span 1;
-
+      margin-bottom: 1rem;
       ul {
         list-style: none;
         li {
@@ -18,6 +20,30 @@ footer {
           margin: 0 1rem 2rem 0;
 
           color: $text2-color;
+        }
+      }
+      input[type="text"] {
+        padding: 0.8rem;
+        font-size: 17px;
+        border: 1px solid $border-color;
+        float: left;
+        width: 80%;
+        background: $text1-color;
+      }
+      button {
+        float: left;
+        width: 20%;
+        padding: 0.8rem;
+        background: $secondary-color;
+        color: $text1-color;
+        font-size: 17px;
+        border: 1px solid $border-color;
+        border-left: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $text1-color;
+          color: $secondary-color;
         }
       }
     }

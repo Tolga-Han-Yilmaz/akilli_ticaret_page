@@ -1,5 +1,10 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -52,9 +57,14 @@ const Footer = () => {
           </div>
           <p>E-Bültene abone olun, gelişmeleri kaçırmayın</p>
           <input type="text" placeholder="E-Posta Adresiniz" />
-          <button type="submit"></button>
+          <button type="submit">
+            <FaArrowRight />
+          </button>
         </div>
       </div>
+
+      <hr />
+      <p>Copyright © 2022 Tolga Han YILMAZ </p>
     </footer>
   );
 };
